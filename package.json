@@ -1,0 +1,34 @@
+{
+  "name": "merlonix-mcp",
+  "version": "1.0.0",
+  "description": "Stdio bridge to the hosted Merlonix monitoring MCP server (domain health, SSL/DNS, MCP server health checks, agent readiness, vendor status). 8 public tools, no auth required.",
+  "type": "module",
+  "bin": {
+    "merlonix-mcp": "src/index.js"
+  },
+  "files": [
+    "src"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.30.0"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "monitoring",
+    "ssl",
+    "dns",
+    "uptime",
+    "domain-health"
+  ],
+  "author": "Merlonix (https://merlonix.com)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cmhenry79/merlonix-mcp.git"
+  },
+  "homepage": "https://merlonix.com/docs/mcp-server/"
+}
