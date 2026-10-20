@@ -9,6 +9,40 @@ status for 11 major cloud vendors.
 **8 public tools, no signup, no API key.** An optional API key unlocks
 authenticated account tools (managing monitored assets and alerts).
 
+## Free diagnostic skill
+
+[Download Merlonix Diagnostics v1.0.0](https://github.com/cmhenry79/merlonix-mcp/releases/download/merlonix-diagnostics-v1.0.0/merlonix-diagnostics-1.0.0.zip)
+or [read the skill source](skills/merlonix-diagnostics/SKILL.md).
+
+The skill teaches your assistant which public checks to run, how to interpret
+partial or inconclusive results, and which troubleshooting steps to suggest.
+It covers domain SSL/DNS, MCP connectivity, vendor status, email blocklisting,
+single-page broken links, and agent readiness. It does not change your account,
+repair infrastructure, or schedule monitoring. No signup or API key is needed.
+
+### Install
+
+1. Download and extract the ZIP. Keep the entire `merlonix-diagnostics` folder,
+   including its `references` directory.
+2. Copy that folder into your assistant's supported skill directory. For Codex,
+   use `~/.codex/skills/merlonix-diagnostics/`. If you already have a version
+   installed, preserve any local edits before replacing it.
+3. Connect the Merlonix HTTP MCP server using the instructions below, or follow
+   the bundled [connection guide](skills/merlonix-diagnostics/references/connection.md).
+   Installing the skill does not automatically connect its tools.
+4. Reload your assistant's skills if necessary, then ask:
+   **"Use merlonix-diagnostics to check merlonix.com for SSL and DNS problems."**
+
+You can also clone this repository and copy `skills/merlonix-diagnostics/`.
+Other assistants have their own skill directories and MCP configuration;
+compatibility depends on their ability to load Agent Skills and call HTTP MCP
+tools (or make HTTPS JSON requests). This package has been format-validated
+and tested against the live tool API, not every client's installation UI.
+
+Checks send the supplied public target to Merlonix. Do not provide private
+addresses, credentials, or signed URLs. Results are point-in-time observations
+subject to availability and rate limits, not guarantees of uptime or security.
+
 ## The hosted server (preferred)
 
 Merlonix runs a remote MCP server over **Streamable HTTP**
@@ -88,5 +122,6 @@ history, and alert acknowledge/resolve — see the
 
 ## License
 
-MIT for this bridge. The hosted Merlonix service itself is a commercial
+MIT for this bridge and the diagnostic skill; the skill ZIP includes the
+[license](LICENSE). The hosted Merlonix service itself is a commercial
 product with a free tier — see [merlonix.com/pricing](https://merlonix.com/pricing/).
