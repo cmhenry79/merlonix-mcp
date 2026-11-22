@@ -1,5 +1,7 @@
 # merlonix-mcp
 
+[![mcptry](https://mcptry.com/badge/com.merlonix/monitoring)](https://mcptry.com/servers/com.merlonix/monitoring)
+
 MCP access to [Merlonix](https://merlonix.com) — live infrastructure monitoring
 tools for AI agents. Domain health (SSL + DNS + registration + reachability),
 MCP server health checks with an A–F security posture grade, AI

@@ -1,0 +1,27 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "com.merlonix/monitoring",
+  "title": "Merlonix Monitoring",
+  "description": "Agency monitoring: uptime, SSL, DNS, blocklists, AI visibility, MCP health. 16 tools, 8 no-auth.",
+  "version": "1.0.3",
+  "websiteUrl": "https://merlonix.com",
+  "repository": {
+    "url": "https://github.com/cmhenry79/merlonix-mcp",
+    "source": "github"
+  },
+  "icons": [
+    {
+      "src": "https://raw.githubusercontent.com/cmhenry79/merlonix-mcp/main/logo-400.png",
+      "mimeType": "image/png",
+      "sizes": [
+        "400x400"
+      ]
+    }
+  ],
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://api.merlonix.com/mcp"
+    }
+  ]
+}
